@@ -9,4 +9,15 @@ while True:
         print("Some input could not be converted to a number!")
     else:
         break
-print(numbers)
+
+# sort the list
+numbers.sort()
+
+if len(numbers) % 2 != 0:
+    print(numbers[len(numbers)// 2])
+else:
+    # first value = round down 
+    first_value = numbers[len(numbers) // 2 - 1]
+    # second value = round up
+    second_value = numbers[len(numbers) // 2]
+    print((first_value + second_value) / 2)
